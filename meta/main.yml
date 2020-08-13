@@ -2,6 +2,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: kamailio
   author: Karsten Horsmann
   description: Kamailio SIP server installation for Linux
   company: ""
