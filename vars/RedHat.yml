@@ -1,0 +1,6 @@
+---
+root_group: root
+kamailio_conf_path: /etc/kamailio/
+kamailio_conf_file_path: /etc/kamailio/kamailio.conf
+kamailio_pidfile: /run/kamailio.pid
+__kamailio_user: "kamailio"

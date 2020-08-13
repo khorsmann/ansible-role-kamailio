@@ -1,0 +1,32 @@
+---
+- name: Import kamailio.org RPM Key db
+  rpm_key:
+    state: present 
+    key: https://rpm.kamailio.org/rpm-pub.key
+    fingerprint: 13b5 5f7c 63ea 5879 de92 9c5c bc1d ed8a 17a1 2ee1
+  register: rpm_key_output
+  notify: cargo-cult-yum-gpg
+  when: kamailio_yum_repo_enabled | bool
+
+- name: debug rpm_key
+  debug:
+    var: rpm_key_output
+
+- name: Enable kamailio repo.
+  template:
+    src: kamailio.repo.j2
+    dest: /etc/yum.repos.d/kamailio.repo
+    owner: root
+    group: "{{ root_group }}"
+    mode: 0644
+  notify:
+    - cargo-cult-yum-gpg
+    - yum-clean-metadata
+  when: kamailio_yum_repo_enabled | bool
+
+- meta: flush_handlers
+
+- name: Ensure kamailio is installed.
+  package:
+    name: "{{ kamailio_package_name }}"
+    state: present

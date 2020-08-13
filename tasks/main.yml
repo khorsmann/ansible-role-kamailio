@@ -1,0 +1,20 @@
+---
+# tasks file for kamailio
+# Variable setup.
+- name: Include OS-specific variables.
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Define kamailio_user.
+  set_fact:
+    kamailio_user: "{{ __kamailio_user }}"
+  when: kamailio_user is not defined
+
+# Setup/install tasks.
+- include_tasks: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Ensure kamailio service is running as configured.
+  service:
+    name: kamailio
+    state: "{{ kamailio_service_state }}"
+    enabled: "{{ kamailio_service_enabled }}"

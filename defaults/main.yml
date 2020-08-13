@@ -1,0 +1,14 @@
+---
+# defaults file for kamailio
+
+kamailio_package_name: "kamailio"
+
+# could be master, latest, 5.3-weekly, 5.2-weekly, 5.4-latest, 5.4.0 see template/kamailio.repo.j2
+kamailio_default_release: "5.4.0"
+
+# Use for Redhat installation, enables kamailio.org rpm repos
+kamailio_yum_repo_enabled: true
+
+
+kamailio_service_state: started
+kamailio_service_enabled: true

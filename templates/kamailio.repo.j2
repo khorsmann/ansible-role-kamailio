@@ -1,0 +1,199 @@
+[kamailio]
+name=Kamailio - latest - Packages for the Kamailio latest release
+baseurl=https://rpm.kamailio.org/centos/$releasever/latest/$basearch/
+{% if kamailio_default_release == 'latest' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=30d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-master]
+name=Kamailio - master - Developmental packages for the next Kamailio release
+baseurl=https://rpm.kamailio.org/centos/$releasever/master/master/$basearch/
+{% if kamailio_default_release == 'master' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=12h
+repo_gpgcheck=1
+type=rpm
+gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+skip_if_unavailable=True
+
+[kamailio-5.3-weekly]
+name=Kamailio - 5.3 - Developmental packages for the Kamailio 5.3 branch
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.3/weekly/$basearch/
+{% if kamailio_default_release == '5.3-weekly' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=7d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-5.2-weekly]
+name=Kamailio - 5.2 - Developmental packages for the Kamailio 5.2 branch
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.2/weekly/$basearch/
+{% if kamailio_default_release == '5.2-weekly' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=7d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-5.4]
+name=Kamailio - 5.4 - Packages for the latest Kamailio 5.4 release
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.4/5.4/$basearch/
+{% if kamailio_default_release == '5.4-latest' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=30d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-5.4.0]
+name=Kamailio - 5.4.0 - Packages for the Kamailio 5.4.0 release
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.4/5.4.0/$basearch/
+{% if kamailio_default_release == '5.4.0' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=30d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-5.3]
+name=Kamailio - 5.3 - Packages for the latest Kamailio 5.3 release
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.3/5.3/$basearch/
+{% if kamailio_default_release == '5.3-latest' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+enabled=0
+metadata_expire=30d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-5.3.5]
+name=Kamailio - 5.3.5 - Packages for the Kamailio 5.3.5 release
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.3/5.3.5/$basearch/
+{% if kamailio_default_release == '5.3.5' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=30d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-5.3.4]
+name=Kamailio - 5.3.4 - Packages for the Kamailio 5.3.4 release
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.3/5.3.4/$basearch/
+{% if kamailio_default_release == '5.3.4' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=30d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-5.3.2]
+name=Kamailio - 5.3.2 - Packages for the Kamailio 5.3.2 release
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.3/5.3.2/$basearch/
+{% if kamailio_default_release == '5.3.2' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=30d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-5.3.1]
+name=Kamailio - 5.3.1 - Packages for the Kamailio 5.3.1 release
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.3/5.3.1/$basearch/
+{% if kamailio_default_release == '5.3.1' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=30d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-5.2]
+name=Kamailio - 5.2 - Packages for the latest Kamailio 5.2 release
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.2/5.2/$basearch/
+{% if kamailio_default_release == '5.2-latest' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=30d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-5.2.7]
+name=Kamailio - 5.2.7 - Packages for the Kamailio 5.2.7 release
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.2/5.2.7/$basearch/
+{% if kamailio_default_release == '5.2.7' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=30d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+[kamailio-5.2.6]
+name=Kamailio - 5.2.6 - Packages for the Kamailio 5.2.6 release
+baseurl=https://rpm.kamailio.org/centos/$releasever/5.2/5.2.6/$basearch/
+{% if kamailio_default_release == '5.2.6' %}
+enabled=1
+{% else %}
+enabled=0
+{% endif %}
+metadata_expire=30d
+repo_gpgcheck=1
+gpgkey=https://rpm.kamailio.org/rpm-pub.key
+type=rpm
+skip_if_unavailable=True
+
+

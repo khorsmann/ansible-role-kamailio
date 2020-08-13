@@ -1,0 +1,15 @@
+---
+# handlers file for kamailio
+
+# command: yum -q makecache -y --disablerepo='*' --enablerepo='kam*'
+- name: cargo-cult-yum-gpg
+  command: yum repolist -y -q
+  args:
+    warn: no
+
+# Handler showing how to clean yum metadata cache
+- name: yum-clean-metadata
+  command: yum clean metadata
+  args:
+    warn: no
+
